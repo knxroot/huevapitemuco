@@ -1,20 +1,5 @@
-
-process.addListener('uncaughtException',function(err,stack){
-  console.log('------------------');
-  console.log('Exception: '+err);
-  console.log(err.stack);
-  console.log('------------------');
-});
-
-var LiveStats = require('./lib/livestats');
-new LiveStats({
-  port: 8000,
-  geoipServer:{
-    hostname: 'geoip.peepcode.com'
-   , port: 80
-  }
-});
-
-
-
-
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('HOLAMUNDO SEGUNDA PRUEBA\n');
+}).listen(process.env.PORT || 3000);
