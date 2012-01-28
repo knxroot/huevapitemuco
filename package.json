@@ -1,7 +1,0 @@
-{
-  "name": "huevapitemuco",
-  "version": "0.0.2",
-  "dependencies": {
-     "node-static": "0.5.3"
-  }
-}
